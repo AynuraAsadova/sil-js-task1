@@ -15,7 +15,7 @@ let fullName = "Aynurə Əsədova Ehtiram";
 // let array = fullName.split("");                    //1-ci usul
 
 // // let array = [];                                    //2-ci usul
-// // for (i = 0; i < fullName.length; i++) {
+// // for (let i = 0; i < fullName.length; i++) {
 // //   array.push(fullName[i]);
 // // }
 
@@ -43,7 +43,7 @@ let arr = [
 // //4) Yuxaridaki arrayda 5 reqeminin nece defe tekrarlandigini tapin
 
 // let count = 0;
-// // for (i = 0; i < arr.length; i++) {
+// // for (let i = 0; i < arr.length; i++) {
 // //   if (arr[i] == 5) {
 // //     count++;
 // //   }
@@ -110,7 +110,7 @@ let arr = [
 // // let largest = Math.max(...arr);
 
 // let largest = 0;
-// for (i = 0; i < arr.length; i++) {
+// for (let i = 0; i < arr.length; i++) {
 //   if (largest < arr[i]) {
 //     largest = arr[i];
 //   }
@@ -123,7 +123,7 @@ let arr = [
 
 // //12) 4 reqeminin arrayin hansi indexlerinde oldugunu gosterin
 // let index = "";
-// for (i = 0; i < arr.length; i++) {
+// for (let i = 0; i < arr.length; i++) {
 //   if (arr[i] == 4) {
 //     index += i + " ";
 //   }
@@ -133,7 +133,7 @@ let arr = [
 
 // //13) 5 reqeminin arraydaki en boyuk ve en kicik indexlerini tapin
 // let index = [];
-// for (i = 0; i < arr.length; i++) {
+// for (let i = 0; i < arr.length; i++) {
 //   if (arr[i] == 5) {
 //     index.push(i);
 //   }
@@ -160,7 +160,7 @@ let arr = [
 
 // //15) 7 reqeminin indexleri cemini tapin.
 // let index = [];
-// for (i = 0; i < arr.length; i++) {
+// for (let i = 0; i < arr.length; i++) {
 //   if (arr[i] == 7) {
 //     index.push(i);
 //   }
@@ -340,3 +340,25 @@ let arr2 = [
 // }
 
 // 30) Bura da ozunuz arr2 ile ede bileceyiniz en maragli yeni funksionalligi yazin.
+// // arr2 de her bir obyekte indexini elave edin
+// let newArr = arr2.map((el, i) => {
+//   return {
+//     ...el,
+//     index: i,
+//   };
+// });
+// console.log(newArr);
+
+// arr2.forEach((x) => {
+//   x.index = arr2.indexOf(x)
+// })
+// console.log(arr2);
+
+// // arr2 de "name"-i bashladigi herfle biten obyekleri yeni arraya yigin
+// let newArr = [];
+// for (let arr of arr2) {
+//   if ((arr.name[0] == arr.name.slice(-1))) {
+//     newArr.push(arr);
+//   }
+// }
+// console.log(newArr);
